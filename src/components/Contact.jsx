@@ -54,8 +54,8 @@ function Contact() {
         </svg>
       ),
       title: 'Phone',
-      content: '+971 4 123 4567',
-      link: 'tel:+97141234567'
+      content: '+251 995 324922',
+      link: 'tel:+251 995 324922'
     },
     {
       icon: (
@@ -100,7 +100,7 @@ function Contact() {
         </svg>
       ),
       title: 'Location',
-      content: 'Dubai Healthcare City, UAE',
+      content: 'Addis Ababa, Ethiopia',
       link: 'https://maps.google.com'
     }
   ];

@@ -44,7 +44,7 @@ function Partners() {
       id: 5,
       name: 'Royal Care Hospital',
       category: 'hospital',
-      location: 'Muscat, Oman',
+      location: 'addis ababa, Bahir Dar',
       image: 'https://placehold.co/400x300?text=Hospital+3',
       specialties: ['Emergency Care', 'Internal Medicine', 'Obstetrics'],
       rating: 4.6
@@ -53,7 +53,7 @@ function Partners() {
       id: 6,
       name: 'Elite Medical Center',
       category: 'clinic',
-      location: 'Manama, Bahrain',
+      location: 'Gonder, Debre Markos',
       image: 'https://placehold.co/400x300?text=Medical+Center',
       specialties: ['Family Medicine', 'Dermatology', 'Dental'],
       rating: 4.7
@@ -114,9 +114,9 @@ function Partners() {
                   alt={partner.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary">
+                {/* <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary">
                   {partner.rating} ★
-                </div>
+                </div> */}
               </div>
 
               <div className="p-6">
@@ -162,9 +162,9 @@ function Partners() {
                   </div>
                 </div>
 
-                <button className="w-full btn-primary">
+                {/* <button className="w-full btn-primary">
                   Schedule Appointment
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
