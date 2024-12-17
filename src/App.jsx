@@ -22,13 +22,33 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
+             
+                <section id="home">
                 <Hero />
-                <Services />
-                <About />
+
+                </section>
+               <section id="services">
+               <Services />
+                </section> 
+              <section id='about'>
+              <About />
+                </section>  
+                <section id='partners'>
+
                 <Partners />
+                </section>
+             
+                <section id='diagnostics'>
                 <Diagnostics />
+                </section>
+              
+                <section id='news'>
                 <News />
+</section>
+                <section id='contact'>
                 <Contact />
+</section>
+              
               </>
             } />
             <Route path="/about" element={<About />} />

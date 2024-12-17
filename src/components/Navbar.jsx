@@ -7,14 +7,14 @@ function Navbar() {
   const location = useLocation();
 
   const menuItems = [
-    { text: 'Home', path: '/' },
-    { text: 'About Us', path: '/about' },
-    { text: 'Services', path: '/services' },
+    { text: 'Home', path: '/#home' },
+    { text: 'About Us', path: '/#about' },
+    { text: 'Services', path: '/#services' },
     { text: 'Physicians', path: '/physicians' },
-    { text: 'Partner Hospitals', path: '/partners' },
-    { text: 'Diagnostics', path: '/diagnostics' },
-    { text: 'International Referrals', path: '/referrals' },
-    { text: 'Contact', path: '/contact' },
+    { text: 'Partner Hospitals', path: '/#partners' },
+    { text: 'Diagnostics', path: '/#diagnostics' },
+    { text: 'International Referrals', path: '#referrals' },
+    { text: 'Contact', path: '#contact' },
   ];
 
   useEffect(() => {
@@ -50,9 +50,9 @@ function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
-              <Link
+              <a
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors
                   ${isActive(item.path)
                     ? 'text-primary bg-primary/10'
@@ -60,7 +60,7 @@ function Navbar() {
                   }`}
               >
                 {item.text}
-              </Link>
+              </a>
             ))}
             <button className="ml-4 px-4 py-2 rounded-full bg-primary text-white hover:bg-primary-dark transition-colors">
               Book Appointment
@@ -71,7 +71,7 @@ function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md  text-primary bg-gray-100 focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (

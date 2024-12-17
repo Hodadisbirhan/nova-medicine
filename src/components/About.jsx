@@ -42,8 +42,9 @@ function About() {
               <span className="text-primary block mt-2">in Ethiopia</span>
             </h2>
             <p className="text-gray-600 mb-8">
-              Nova Medics Consultancies is at the forefront of transforming healthcare delivery in Ethiopia. 
-              We combine international expertise with local understanding to provide world-class medical services.
+            Nova Medics Consultancies is a healthcare consultancy organization dedicated to bridging the gap between patients and
+            premium medical services. Based in Ethiopia, we strive to make world-class healthcare accessible to patients by directly employing skilled physicians,
+            partnering with leading hospitals and diagnostic centers, and providing an innovative digital platform for seamless service delivery.
             </p>
             <div className="grid grid-cols-2 gap-8">
               {stats.map((stat, index) => (
@@ -67,6 +68,64 @@ function About() {
             />
           </div>
         </div>
+
+
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+
+        <div className="relative">
+            <div className="absolute -top-8 -left-8 w-72 h-[12rem] bg-primary/10 rounded-full blur-3xl" />
+            <img
+              src="/images/doctors/team.jpg"
+              alt="Medical Team"
+              className="relative z-10 h-[20rem] rounded-2xl "
+            />
+          </div>
+
+          <div>
+            <h2 className="text-4xl font-bold text-secondary mb-6">
+              Mission
+           
+            </h2>
+            <p className="text-gray-600 mb-8">
+            To provide patients with reliable, affordable, and high-quality healthcare solutions by managing and coordinating consultations, diagnostics, and procedures through a network of employed physicians and partner facilities
+            </p>
+         
+          </div>
+          
+     
+        </div>
+
+        <div className="flex flex-col  md:flex-row items-center mb-20 w-full justify-between ">
+
+
+
+  <div className='w-[50%]'>
+    <h2 className="text-4xl font-bold text-secondary mb-6">
+      Vision
+   
+    </h2>
+
+
+    <p className="text-gray-600 mb-8">
+    To become a leading healthcare consultancy in Ethiopia and East Africa, empowering patients with accessible medical expertise and modern solutions tailored to their needs.    </p>
+ 
+    </div>
+  <div>
+  <div className=" w-full -top-8 -left-8  h-[6rem] bg-primary/10 rounded-full blur-3xl" />
+    <img
+      src="/images/doctors/team.jpg"
+      alt="Medical Team"
+      className="relative z-10 h-[20rem]  rounded-2xl "
+    />
+ 
+  
+
+ 
+  </div>
+  
+
+</div>
 
         {/* Values Section */}
         <div className="text-center mb-16">
