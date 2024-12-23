@@ -142,19 +142,11 @@ function Navbar() {
                   setAuthMode('login');
                   setShowAuthModal(true);
                 }}
-                className="px-4 py-2 text-gray-700 hover:text-primary transition-colors"
+                className="px-4 py-2 border border-primary text-primary bg-white hover:bg-primary  hover:text-white transition-colors"
               >
                 Sign In
               </button>
-              <button
-                onClick={() => {
-                  setAuthMode('signup');
-                  setShowAuthModal(true);
-                }}
-                className="px-4 py-2 bg-gray-100 rounded-full text-primary hover:bg-gray-200 transition-colors"
-              >
-                Sign Up
-              </button>
+         
             </div>
           </div>
 
@@ -223,7 +215,7 @@ function Navbar() {
                 setShowAuthModal(true);
                 setIsOpen(false);
               }}
-              className="w-full px-4 py-2 text-left text-gray-700 bg-primary hover:text-primary transition-colors"
+              className="w-full px-4 py-2 bg-primary text-left text-gray-700  hover:text-primary transition-colors"
             >
               Sign In
             </button>

@@ -40,7 +40,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
+          className="absolute right-4 top-4 bg-white border border-primary text-gray-400 hover:text-gray-600"
         >
           <IoMdClose size={24} />
         </button>
@@ -52,11 +52,11 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
 
         {/* Social Login Buttons */}
         <div className="space-y-3 mb-6">
-          <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+          <button className="w-full flex items-center bg-white justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
             <FaGoogle className="text-red-500" />
             <span>Continue with Google</span>
           </button>
-          <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+          <button className="w-full bg-white flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
             <FaFacebook className="text-blue-600" />
             <span>Continue with Facebook</span>
           </button>
@@ -83,7 +83,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
                 required
               />
             </div>
@@ -98,13 +98,13 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
+              className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium bg-white text-gray-700 mb-1">
               Password
             </label>
             <input
@@ -112,7 +112,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
+              className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
               required
             />
           </div>
@@ -127,7 +127,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary"
                 required
               />
             </div>
@@ -148,7 +148,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
               Don't have an account?{' '}
               <button
                 onClick={() => setMode('signup')}
-                className="text-primary hover:underline"
+                className="text-primary bg-white border border-primary px-2 py-1 rounded-lg "
               >
                 Sign up
               </button>
@@ -158,7 +158,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
               Already have an account?{' '}
               <button
                 onClick={() => setMode('login')}
-                className="text-primary hover:underline"
+                className="text-primary bg-white border border-primary px-2 py-1 rounded-lg "
               >
                 Sign in
               </button>
