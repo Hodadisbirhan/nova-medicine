@@ -58,7 +58,7 @@ function Hero() {
             {/* Main image */}
             <div className="relative">
               <img
-                src="/images/doctors/background.webp"
+                src="/images/doctors/nova-background.jpg"
                 alt="Professional Medical Team"
                 className={`relative z-10 w-full rounded-md h-auto object-contain transform scale-110 translate-y-6 transition-opacity duration-500 ${
                   imageLoaded ? 'opacity-100' : 'opacity-0'

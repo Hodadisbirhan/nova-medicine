@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoMdMail } from "react-icons/io";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [subscribeStatus, setSubscribeStatus] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribeStatus('success');
+      setEmail('');
+      setTimeout(() => setSubscribeStatus(''), 3000);
+    }
+  };
 
   const footerLinks = {
     services: [
@@ -73,7 +85,7 @@ function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center mb-6">
               <img
-                src="/images/doctors/logo.jpg"
+                src="/images/doctors/real_logo.jpg"
                 alt="Nova Medics Logo"
                 className="h-12"
               />
@@ -100,8 +112,8 @@ function Footer() {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-4">
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-3">
               {footerLinks.services.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -117,8 +129,8 @@ function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-4">
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-3">
               {footerLinks.company.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -132,36 +144,48 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Legal Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Legal</h3>
-            <ul className="space-y-4">
-              {footerLinks.legal.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Newsletter Subscription */}
+          <div className="lg:col-span-2 space-y-4">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-300">
+              Subscribe to our newsletter for the latest medical updates and health tips.
+            </p>
+            <form onSubmit={handleSubscribe} className="space-y-3">
+              <div className="flex items-center">
+                <div className="relative h-full flex-grow">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <IoMdMail className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="block w-full pl-10  pr-3 py-[0.68rem] border  border-primary rounded-l-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary sm:text-sm"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className=" rounded-l-none border border-white  px-4 py-2 rounded-r-lg text-white font-medium bg-primary transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
+              {subscribeStatus === 'success' && (
+                <p className="text-green-400 text-sm">
+                  Thank you for subscribing!
+                </p>
+              )}
+            </form>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              {currentYear} Nova Medics. All rights reserved.
-            </p>
-            <div className="mt-4 md:mt-0">
-              <button className="bg-secondary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors">
-                Book Appointment
-              </button>
-            </div>
-          </div>
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <p className="text-center text-gray-300">
+            {currentYear} Nova Medics. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

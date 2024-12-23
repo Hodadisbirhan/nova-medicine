@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 function Physicians() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialty, setSelectedSpecialty] = useState('all');
-  const  physicianImage = "/images/doctors/physicians.jpg";
+  const  physicianImage = "/images/doctors/doctor2.jpg";
+  const  physicianImage3 = "/images/doctors/doctor.jpg";
   const physicians = [
     {
       id: 1,
@@ -40,7 +41,7 @@ function Physicians() {
       id: 4,
       name: "Dr. Emily Brown",
       specialty: "Dermatology",
-    
+      image: physicianImage3,
       description: "Skin care specialist with 6 years of experience.",
       education: "MD - Yale University",
       languages: ["English", "Spanish", "Amharic"],
@@ -50,7 +51,7 @@ function Physicians() {
       id: 5,
       name: "Dr. David Kim",
       specialty: "Orthopedics",
-
+      image: physicianImage3,
       description: "Focused on musculoskeletal health for 15 years.",
       education: "MD - Columbia University",
       languages: ["English", "Korean", "Amharic"],
@@ -60,7 +61,7 @@ function Physicians() {
       id: 6,
       name: "Dr. Lisa Martinez",
       specialty: "Gynecology",
-  
+      image: physicianImage3,
       description: "Women's health expert with 9 years of experience.",
       education: "MD - UCLA Medical School",
       languages: ["English", "Spanish", "Amharic"],

@@ -62,7 +62,7 @@ function About() {
           <div className="relative">
             <div className="absolute -top-8 -left-8 w-72 h-[12rem] bg-primary/10 rounded-full blur-3xl" />
             <img
-              src="/images/doctors/team.jpg"
+              src="/images/doctors/about.jpg"
               alt="Medical Team"
               className="relative z-10  rounded-2xl "
             />
@@ -76,7 +76,7 @@ function About() {
         <div className="relative">
             <div className="absolute -top-8 -left-8 w-72 h-[12rem] bg-primary/10 rounded-full blur-3xl" />
             <img
-              src="/images/doctors/team.jpg"
+              src="/images/doctors/doctor3.jpg"
               alt="Medical Team"
               className="relative z-10 h-[20rem] rounded-2xl "
             />
@@ -114,7 +114,7 @@ function About() {
   <div>
   <div className=" w-full -top-8 -left-8  h-[6rem] bg-primary/10 rounded-full blur-3xl" />
     <img
-      src="/images/doctors/team.jpg"
+      src="/images/doctors/doctor2.jpg"
       alt="Medical Team"
       className="relative z-10 h-[20rem]  rounded-2xl "
     />
