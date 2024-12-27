@@ -47,10 +47,14 @@ function Navbar() {
     { text: 'About Us', path: '/#about' },
     { text: 'Services', path: '/#services', hasDropdown: true, dropdownItems: services },
     { text: 'Physicians', path: '/physicians', hasDropdown: true, dropdownItems: specialties },
-    { text: 'Partner Hospitals', path: '/#partners' },
+    { text: 'Our Hospitals', path: '/#partners' },
+    { text: 'Pharmacies', path: '/#pharmacies' },
     { text: 'Diagnostics', path: '/#diagnostics' },
-    { text: 'International Referrals', path: '#referrals' },
+    { text: 'Consultants', path: '#consultants' },
+    { text: 'Our Referrals', path: '#referrals' },
     { text: 'Contact', path: '#contact' },
+  
+    
   ];
 
   useEffect(() => {

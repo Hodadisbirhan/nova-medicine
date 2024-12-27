@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(
+    {
     name: '',
     email: '',
     phone: '',
     subject: '',
     message: ''
-  });
+  }
+);
 
   const [submitted, setSubmitted] = useState(false);
 

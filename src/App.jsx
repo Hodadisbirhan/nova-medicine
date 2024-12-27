@@ -12,6 +12,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
 import Physicians from './components/Physicians';
+import Consultants from './components/Consultant';
+import Pharmacies from './components/Pharmacy';
 
 function App() {
   return (
@@ -41,6 +43,14 @@ function App() {
                 <section id='diagnostics'>
                 <Diagnostics />
                 </section>
+                
+                <section id='consultants'>
+                <Consultants />
+                </section>
+
+                <section id='pharmacies'>
+                <Pharmacies />
+                </section>
               
                 <section id='news'>
                 <News />
@@ -57,6 +67,7 @@ function App() {
             <Route path="/diagnostics" element={<Diagnostics />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/consultants" element={<Consultants />} />
             <Route path="/physicians" element={<Physicians />} />
             <Route path="/referral" element={<Contact />} />
           </Routes>
