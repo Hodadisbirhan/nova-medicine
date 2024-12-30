@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Pharmacy1 from '../assets/Pharmacies/pharmacy center.png';
 import DrugStore1 from '../assets/Pharmacies/Drug store.png';
 import MedicalCenter1 from '../assets/Pharmacies/Mediccal Supply Center.png';
-
-
-
 
 
 function Pharmacy() {
