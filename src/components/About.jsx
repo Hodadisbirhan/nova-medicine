@@ -1,6 +1,7 @@
 import React from 'react';
 
 function About() {
+  
   const stats = [
     { number: '15+', label: 'Years Experience' },
     { number: '50+', label: 'Expert Physicians' },

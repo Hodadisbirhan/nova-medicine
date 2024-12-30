@@ -4,7 +4,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import AuthModal from './auth/AuthModal';
 
-function Navbar() {
+function Navbar() 
+{
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -23,7 +24,8 @@ function Navbar() {
     },
     {
       category: "Surgical Services",
-      items: [
+      items: 
+      [
         { text: "General Surgery", path: "/services/general-surgery" },
         { text: "Minimally Invasive", path: "/services/minimally-invasive" },
         { text: "Robotic Surgery", path: "/services/robotic-surgery" }
@@ -33,7 +35,7 @@ function Navbar() {
 
   const specialties = [
     {
-      category: "Specialists",
+      category: " Our Specialists Physicians",
       items: [
         { text: "Cardiology", path: "/physicians/cardiology" },
         { text: "Neurology", path: "/physicians/neurology" },
@@ -42,19 +44,36 @@ function Navbar() {
     }
   ];
 
+  const hospitals = [
+    {
+      category: "Our Partner Hospitals",
+      items: [
+        { text: "Addis Ababa", path: "/partners/addisababa" },
+        { text: "Amhara Region", path: "/partners/bahirdar" },
+        { text: "Oromia Region", path: "/partners/oromia" },
+        { text: "Sidama Region", path: "/partners/sidama" },
+        { text: "Tigray Region", path: "/partners/mekele" },
+        { text: "Benshagulgumz Region", path: "/partners/benshangulgunz" },
+        { text: "Dire Dawa", path: "/partners/diredawa" },
+        { text: "Hareri Region", path: "/partners/hareri" },
+        { text: "Somali Region", path: "/partners/somali" },
+        { text: "America", path: "/partners/america" },
+        { text: "Europe", path: "/partners/europ" },
+        { text: "Australia", path: "/partners/australia" },
+      ]
+    }
+  ];
   const menuItems = [
     { text: 'Home', path: '/#home' },
     { text: 'About Us', path: '/#about' },
     { text: 'Services', path: '/#services', hasDropdown: true, dropdownItems: services },
     { text: 'Physicians', path: '/physicians', hasDropdown: true, dropdownItems: specialties },
-    { text: 'Our Hospitals', path: '/#partners' },
+    { text: 'Our Hospitals', path: '/#partners',hasDropdown: true, dropdownItems: hospitals },
     { text: 'Pharmacies', path: '/#pharmacies' },
     { text: 'Diagnostics', path: '/#diagnostics' },
     { text: 'Consultants', path: '#consultants' },
-    { text: 'Our Referrals', path: '#referrals' },
+    { text: 'Referals', path: '#referals' },
     { text: 'Contact', path: '#contact' },
-  
-    
   ];
 
   useEffect(() => {
