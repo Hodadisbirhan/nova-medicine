@@ -16,7 +16,7 @@ function Physicians() {
       description: "Specializing in cardiovascular health with over 10 years of experience.",
       education: "MD - Harvard Medical School",
       languages: ["English", "Amharic"],
-      availability: 'Mon-Fri'
+      availability: 'Mon-Fri, 9 AM - 5 PM'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function Physicians() {
       description: "Dedicated to children's health and development for 8 years.",
       education: "MD - Johns Hopkins University",
       languages: ["English", "French", "Amharic"],
-      availability: 'Mon-Thu'
+      availability: 'Mon-Thu, 8 AM - 4 PM'
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ function Physicians() {
       description: "Expert in neurological disorders with 12 years of practice.",
       education: "MD - Stanford University",
       languages: ["English", "Mandarin", "Amharic"],
-      availability: 'Mon-Fri'
+      availability: 'Mon-Fri, 10 AM - 6 PM'
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ function Physicians() {
       description: "Skin care specialist with 6 years of experience.",
       education: "MD - Yale University",
       languages: ["English", "Spanish", "Amharic"],
-      availability: 'Mon-Thu'
+      availability: 'Mon-Thu, 9 AM - 5 PM'
     },
     {
       id: 5,
@@ -56,7 +56,7 @@ function Physicians() {
       description: "Focused on musculoskeletal health for 15 years.",
       education: "MD - Columbia University",
       languages: ["English", "Korean", "Amharic"],
-      availability: 'Mon-Fri'
+      availability: 'Mon-Fri, 8 AM - 4 PM'
     },
     {
       id: 6,
@@ -66,11 +66,19 @@ function Physicians() {
       description: "Women's health expert with 9 years of experience.",
       education: "MD - UCLA Medical School",
       languages: ["English", "Spanish", "Amharic"],
-      availability: 'Mon-Thu'
+      availability: 'Mon-Thu, 10 AM - 6 PM'
     }
   ];
 
-  const specialties = ['all', 'Cardiology', 'Neurology', 'Pediatrics', 'Orthopedics', 'Dermatology', 'Gynecology'];
+  const specialties = 
+  [ 'all', 
+    'Cardiology', 
+    'Neurology', 
+    'Pediatrics', 
+    'Orthopedics', 
+    'Dermatology', 
+    'Gynecology'
+  ];
 
   const filteredPhysicians = physicians.filter(physician => {
     const matchesSearch = physician.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -133,25 +141,26 @@ function Physicians() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-secondary mb-2">
+                <h3 className="text-xl font-bold text-secondary mb-2">
                   {physician.name}
                 </h3>
                 <p className="text-primary mb-4">{physician.specialty}</p>
                 <div className="space-y-2 text-gray-600">
                   <p>
-                    <span className="font-semibold">Experience:</span> {physician.description}
+                    <span className="font-bold">Experience:</span> {physician.description}
                   </p>
                   <p>
-                    <span className="font-semibold">Education:</span> {physician.education}
+                    <span className="font-bold">Education:</span> {physician.education}
                   </p>
                   <p>
-                    <span className="font-semibold">Languages:</span>{' '}
+                    <span className="font-bold">Languages:</span>{' '}
                     {physician.languages.join(', ')}
                   </p>
-                  <p>
-                    <span className="font-semibold">Availability:</span>{' '}
-                    {physician.availability}
-                  </p>
+                  <p className="flex items-center"> <span className="font-semibold">Availability:</span> 
+                  <span className="ml-2 px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">
+                     {physician.availability} 
+                     </span>
+                      </p>
                 </div>
                 <button
                   className="w-full mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"

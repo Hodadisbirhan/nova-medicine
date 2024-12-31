@@ -56,8 +56,8 @@ function Contact() {
         </svg>
       ),
       title: 'Phone',
-      content: '+251 995 324922',
-      link: 'tel:+251 995 324922'
+      content: '+251 996050216',
+      link: 'tel:+251 996050216'
     },
     {
       icon: (
