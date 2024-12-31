@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-
+import AppointmentForm from './Forms/Appointment_Form';
 
 function Physicians() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialty, setSelectedSpecialty] = useState('all');
-  const  physicianImage = "/images/doctors/doctor2.jpg";
-  const  physicianImage3 = "/images/doctors/doctor.jpg";
+  const [selectedPhysician, setSelectedPhysician] = useState(null);
+  const physicianImage = "/images/doctors/doctor2.jpg";
+  const physicianImage3 = "/images/doctors/doctor.jpg";
   const physicians = [
     {
       id: 1,
@@ -124,7 +125,7 @@ function Physicians() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPhysicians.map(physician => (
             <div key={physician.id} className="bg-white rounded-xl border-[1px] overflow-hidden transition-shadow">
-              <div className="relative  overflow-hidden">
+              <div className="relative overflow-hidden">
                 <img
                   src={physician.image}
                   alt={physician.name}
@@ -152,7 +153,10 @@ function Physicians() {
                     {physician.availability}
                   </p>
                 </div>
-                <button className="w-full mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+                <button
+                  className="w-full mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+                  onClick={() => setSelectedPhysician(physician)}
+                >
                   Book Appointment
                 </button>
               </div>
@@ -166,6 +170,13 @@ function Physicians() {
           </div>
         )}
       </div>
+
+      {selectedPhysician && (
+        <AppointmentForm
+          physician={selectedPhysician}
+          onClose={() => setSelectedPhysician(null)}
+        />
+      )}
     </section>
   );
 }

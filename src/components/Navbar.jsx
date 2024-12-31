@@ -113,7 +113,7 @@ function Navbar()
               />
             </Link>
           </div>
-
+          
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (

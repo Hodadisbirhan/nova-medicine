@@ -78,7 +78,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-secondary text-white">
       <div className="w-full mx-auto px-[5%] py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
@@ -112,7 +112,7 @@ function Footer() {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-gray-200 font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((item) => (
                 <li key={item.name}>
@@ -129,7 +129,7 @@ function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-gray-100 font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((item) => (
                 <li key={item.name}>
